@@ -22,8 +22,12 @@ public class CodilityBinaryGap {
         int count_gap = 0;
         boolean is_binary_gap = false;
 
-        for(int i = 0; i < binaryString.length(); i++){
+        System.out.println(binaryString);
 
+        // 1000100101
+        for(int i = 0; i < binaryString.length(); i++){  // Time complexity = 0(N)
+            System.out.println("Is gap = " + is_binary_gap);
+            System.out.println("Element = " + binaryString.charAt(i));
             if(binaryString.charAt(i) == '1'){
                 if(max_gap < count_gap){
                     max_gap = count_gap;
@@ -34,8 +38,8 @@ public class CodilityBinaryGap {
                 count_gap += 1;
             }
         }
-        System.out.println(binaryString);
+        
         System.out.println(max_gap);
-        return 0;
+        return max_gap;
     }
 }
