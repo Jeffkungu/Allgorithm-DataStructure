@@ -19,7 +19,7 @@ import java.util.Arrays;
  * 
  * For example, given
  * 
- * A = [3, 8, 9, 7, 6] K = 3 the function should return [9, 7, 6, 3, 8]. Three
+ * A = [2, 3, 8, 9, 7, 6] K = 3 the function should return [9, 7, 6, 2, 3, 8]. Three
  * rotations were made:
  * 
  * [3, 8, 9, 7, 6] -> [6, 3, 8, 9, 7] [6, 3, 8, 9, 7] -> [7, 6, 3, 8, 9] [7, 6,
@@ -28,9 +28,9 @@ import java.util.Arrays;
 public class CodilityCyclicRotation {
 
     public static void main(String[] args) {
-        final int[] arry = new int[] { 1, 2, 3, 4, 5, 6 };
+        final int[] arry = new int[] { 6, 7, 1, 2};
 
-        cyclicRotation(arry, 5);
+        rotate(arry, 200000);
     }
 
     /**
@@ -38,48 +38,44 @@ public class CodilityCyclicRotation {
      * 
      * Total time complexity = O(N) + O(N) + O(N) => 3*O(N) => O(N)
      */
-    private static void cyclicRotation(int[] A, int K) {
-        int[] array1 = new int[K];
-        int index1 = K;
-        int index2 = A.length - K;
-
-        for(int i = 0; i < K; i++){ // Time complexity = O(N)
-            array1[i] = A[i];
-        }
-
-        for(int i = 0; i < A.length - K; i++){ // Time complexity = O(N)
-            A[i] = A[index1];
-            index1++;
-        }
-
-        for(int i = 0; i < array1.length; i++){ // Time complexity = O(N)
-            A[index2] = array1[i];
-            index2++;
-        }
-        System.out.println(Arrays.toString(A));
-        System.out.println(Arrays.toString(array1));
-    }
-
-    public int[] solution(int[] A, int K) {
-        // write your code in Java SE 8
-        int[] array1 = new int[K];
-        int index1 = A.length - K;
-        int index2 = K;
+    public static int[] rotate(int[] A, int K){
+        System.out.println("Initial value = " + Arrays.toString(A) + " and K = " + K);
+        int[] value = null;
         
-        for(int i = 0; i < K; i++){ // Time complexity = O(N)
-            array1[i] = A[index1];
-            index1++;
-        }
+        if(A.length <= 1){
+            return A;
+        } else if(K > A.length){
+           rotate(A, K / A.length);
+           return null; 
+        } else if(K < 1){
+            System.out.println("K value = " + 0);
+            return A;
+        } else {
+            int[] array1 = new int[K];
+            int[] array2 = new int[A.length];
+            int index1 = A.length - K;
+            int index2 = K;
         
-        for(int i = 0; i < A.length - K; i++){
-            A[index2] = A[i];
-            index2++;
-        }
+            for(int i = 0; i < K; i++){ // Time complexity = O(N)
+                array1[i] = A[index1];
+                index1++;
+            }
+        
+            for(int i = 0; i < A.length - K; i++){
+                array2[index2] = A[i];
+                index2++;
+            }
+            System.out.println("Final value 1 = " + Arrays.toString(array2));
 
-        for(int i = 0; i < K; i++){ // Time complexity = O(N)
-            A[i] = array1[i];
+            for(int i = 0; i < K; i++){ // Time complexity = O(N)
+                array2[i] = array1[i];
+            }
+        
+            value = array2;
         }
         
-        return A;
+        System.out.println("Final value 2 = " + Arrays.toString(value));
+        return value;
+
     }
 }
