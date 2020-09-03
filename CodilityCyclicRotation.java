@@ -30,7 +30,7 @@ public class CodilityCyclicRotation {
     public static void main(String[] args) {
         final int[] arry = new int[] { 6, 7, 1, 2};
 
-        rotate(arry, 200000);
+        rotate2(arry, 3);
     }
 
     /**
@@ -77,5 +77,23 @@ public class CodilityCyclicRotation {
         System.out.println("Final value 2 = " + Arrays.toString(value));
         return value;
 
+    }
+
+    // Method 2 = rotating one by one
+    public static int[] rotate2(int[] A, int K){
+        
+        for(int i = 0; i < K; i++){
+            System.out.println("Value 0 = " + Arrays.toString(A));
+            int element = A[0];
+            System.out.println("Element = " + element);
+            for(int j = 0; j < A.length - 1; j++){
+                A[j] = A[j+1];
+                System.out.println("Value 1 = " + Arrays.toString(A));
+            }
+            A[A.length - 1] = element;
+            System.out.println("Value 2 = " + Arrays.toString(A));
+        }
+
+        return A;
     }
 }
