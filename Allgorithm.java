@@ -9,23 +9,9 @@ import java.util.TreeSet;
 public class Allgorithm {
 
     public static void main(final String[] args) {
-        // Set<Integer> set = new TreeSet<Integer>();
-        // set.add(3);
-        // set.add((int) 3.0);
-        // set.add(2);
-        // set.add(2);
-        // set.add(new Integer(2));
-        // set.add(Integer.parseInt("2"));
-
-        int x = 9;
-        if (x == 9) {
-            x = 8;
-            System.out.println(x);
-        }
-        final Integer[] myArr = { 2, 3, 1 };
-        final List<Integer> newArr = Arrays.asList(myArr);
-        newArr.sort(c);
-
+        // removeDuplicates(new String[]{"one", "three", "one", "two", "three", "four", "five", "two"});
+        // findLargestSmallestValue(new int[]{1, 2, 3, 4, 5});
+        mergeSort(new int[]{2, 1, 3});
     }
 
     public static int findSecondLargestNumber(final int[] input) {
@@ -109,28 +95,60 @@ public class Allgorithm {
         }
     }
 
-    public static void checkPrime(final int input) {
-        boolean isPrime = true;
-        for (int i = 2; i < input; i++) {
-            if (input % i == 0) {
-                isPrime = false;
-                break;
-            }
-        }
+    public static void printUprightPyramid() {
+        final Scanner sc = new Scanner(System.in);
+        final int input = sc.nextInt();
+        int elements = 1;
 
+        for (int i = 1; i <= input; i++) {
+            for (int j = 1; j <= elements; j++) {
+                System.out.print(j + " ");
+            }
+            elements++;
+            System.out.println(" ");
+        }
+    }
+
+    public static void printFloydTriangle() {
+        final Scanner sc = new Scanner(System.in);
+        final int input = sc.nextInt();
+        int elements = 1;
+        int number = 1;
+        System.out.println("Floyd Triangle");
+
+        for (int i = 1; i <= input; i++) { // row = 1, rows = 2
+            for (int j = 1; j <= elements; j++) { // elements = 1,
+                System.out.print(number + " "); // number = 1, number = 2
+                number++;
+            }
+            System.out.println(" ");
+            elements++;
+        }
+    }
+
+    public static void checkPrime(final int input) {
+        boolean isPrime = false;
+        if (input % 2 == 0) {
+            isPrime = true;
+        }
         if (isPrime) {
             System.out.print(input + " is prime number");
         } else {
             System.out.print(input + " is not prime number");
         }
+
+        
     }
 
     public static void removeDuplicates(final String[] input) {
         final Set<String> nonDuplicate = new HashSet<>();
+        List<String> list = new ArrayList<>();
         for (final String string : input) {
-            nonDuplicate.add(string);
+            if(!nonDuplicate.add(string)){
+                list.add(string);
+            }
         }
-        System.out.println("Duplicates = " + Arrays.toString(nonDuplicate.toArray()));
+        System.out.println("Duplicates = " + Arrays.toString(list.toArray()));
     }
 
     public static void printDuplicates(final String[] input) {
@@ -147,8 +165,8 @@ public class Allgorithm {
     }
 
     public static void findLargestSmallestValue(final int[] input) {
-        int smallest = 0;
-        int largest = 0;
+        int smallest = input[0];
+        int largest = input[0];
 
         for (final int i : input) {
             if (i < smallest)
@@ -184,22 +202,20 @@ public class Allgorithm {
         System.out.println("Vowels = " + count);
     }
 
-    public static void printFloydTriangle() {
+    public static boolean palindromeString(final String input) {
+        boolean isPalindrome = false;
+        final char[] reveseChar = new char[input.length()];
+        String reverse = "";
 
-        final Scanner sc = new Scanner(System.in);
-        final int input = sc.nextInt();
-        int elements = 1;
-        int number = 1;
-        System.out.println("Floyd Triangle");
-
-        for (int i = 1; i <= input; i++) { // row = 1, rows = 2
-            for (int j = 1; j <= elements; j++) { // elements = 1,
-                System.out.print(number + " "); // number = 1, number = 2
-                number++;
-            }
-            System.out.println(" ");
-            elements++;
+        for(int i = input.length() - 1; i >= 0; i--){
+            reverse += input.charAt(i);
         }
+        if(input.equals(reverse)){
+            isPalindrome = true;
+        }
+
+        return isPalindrome;
+
     }
 
     /**
@@ -230,12 +246,13 @@ public class Allgorithm {
         for (int j = 0; j < rightArray.length; j++) {
             rightArray[j] = input[midpoint + j];
         }
+        System.out.println(Arrays.toString(leftArray) + " + " + Arrays.toString(rightArray));
 
         int[] resultArray = new int[input.length];
 
         leftArray = mergeSort(leftArray);
-        System.out.println("Left array = " + Arrays.toString(leftArray));
         rightArray = mergeSort(rightArray);
+        System.out.println("Left array = " + Arrays.toString(leftArray));
         System.out.println("Right array = " + Arrays.toString(rightArray));
 
         resultArray = merge(leftArray, rightArray);
@@ -251,8 +268,9 @@ public class Allgorithm {
      *         to merge arrays in the mergeSort method.
      */
     public static int[] merge(final int[] leftArray, final int[] rightArray) {
-        System.out.println("Left array 1 = " + Arrays.toString(leftArray));
-        System.out.println("Right array 1 = " + Arrays.toString(rightArray));
+        // System.out.println("Left array 1 = " + Arrays.toString(leftArray));
+        // System.out.println("Right array 1 = " + Arrays.toString(rightArray));
+        // System.out.println("Arrays to merge " + Arrays.toString(leftArray) + " + " + Arrays.toString(rightArray));
 
         final int[] resultArray = new int[leftArray.length + rightArray.length];
 
@@ -276,21 +294,4 @@ public class Allgorithm {
         }
         return resultArray;
     }
-
-    public static boolean palindromeString(final String input) {
-        boolean isPalindrome = false;
-        final char[] reveseChar = new char[input.length()];
-        String reverse = "";
-
-        for(int i = input.length() - 1; i >= 0; i--){
-            reverse += input.charAt(i);
-        }
-        if(input.equals(reverse)){
-            isPalindrome = true;
-        }
-
-        return isPalindrome;
-
-    }
-
 }

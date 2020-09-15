@@ -1,8 +1,9 @@
 public class Recursion {
     public static void main(String[] args) {
-        System.out.println(factorial(3));
+        // System.out.println(factorial(3));
+        // System.out.println("Fibonacci = " + fibonacci(7));
 
-        System.out.println("Fibonacci = " + fibonacci(7));
+        fibonacci(7);
     }
 
     /**
@@ -24,6 +25,7 @@ public class Recursion {
      * @return
      */
     private static int fibonacci(int N){
+        
         if(N >= 3){
             return fibonacci(N - 1) + fibonacci(N - 2);
         } else if (N == 2 || N == 1){
