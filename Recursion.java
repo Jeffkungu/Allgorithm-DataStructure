@@ -3,10 +3,9 @@
  */
 public class Recursion {
     public static void main(String[] args) {
-        // System.out.println(factorial(3));
-        // System.out.println("Fibonacci = " + fibonacci(7));
+        System.out.println("Factorial = " + factorial(-1));
+        // System.out.println("Fibonacci = " + fibonacci(5));
 
-        fibonacci(7);
     }
 
     /**
@@ -20,11 +19,13 @@ public class Recursion {
             return 1;
         }
 
-        return factorial(n);
+        return -1;
     }
 
     /**
      * FibN = Fib(N-1) + Fib(N+2)
+     * Fibonacci sequence is a sequence formed from adding current number to the previous number
+     * in order to get the next number.
      * @return
      */
     private static int fibonacci(int N){

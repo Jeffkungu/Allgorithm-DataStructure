@@ -1,0 +1,196 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BinarySearchTree",
+            "request": "launch",
+            "mainClass": "BinarySearchTree",
+            "projectName": "Allgorithm-DataStructure_ee08ae9a"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Allgorithm<Allgorithm-DataStructure_ee08ae9a>",
+            "request": "launch",
+            "mainClass": "Allgorithm",
+            "projectName": "Allgorithm-DataStructure_ee08ae9a"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-BinarySearch<Allgorithm-DataStructure_ee08ae9a>",
+            "request": "launch",
+            "mainClass": "BinarySearch",
+            "projectName": "Allgorithm-DataStructure_ee08ae9a"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-BinaryTree<Allgorithm-DataStructure_ee08ae9a>",
+            "request": "launch",
+            "mainClass": "BinaryTree",
+            "projectName": "Allgorithm-DataStructure_ee08ae9a"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-BubbleSort<Allgorithm-DataStructure_ee08ae9a>",
+            "request": "launch",
+            "mainClass": "BubbleSort",
+            "projectName": "Allgorithm-DataStructure_ee08ae9a"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-CoderbiteMinWindowSubStrng<Allgorithm-DataStructure_ee08ae9a>",
+            "request": "launch",
+            "mainClass": "CoderbiteMinWindowSubStrng",
+            "projectName": "Allgorithm-DataStructure_ee08ae9a"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-CodilityBinaryGap<Allgorithm-DataStructure_ee08ae9a>",
+            "request": "launch",
+            "mainClass": "CodilityBinaryGap",
+            "projectName": "Allgorithm-DataStructure_ee08ae9a"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-CodilityBrackets<Allgorithm-DataStructure_ee08ae9a>",
+            "request": "launch",
+            "mainClass": "CodilityBrackets",
+            "projectName": "Allgorithm-DataStructure_ee08ae9a"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-CodilityCyclicRotation<Allgorithm-DataStructure_ee08ae9a>",
+            "request": "launch",
+            "mainClass": "CodilityCyclicRotation",
+            "projectName": "Allgorithm-DataStructure_ee08ae9a"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-CodilityDistinct<Allgorithm-DataStructure_ee08ae9a>",
+            "request": "launch",
+            "mainClass": "CodilityDistinct",
+            "projectName": "Allgorithm-DataStructure_ee08ae9a"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-CodilityDominator<Allgorithm-DataStructure_ee08ae9a>",
+            "request": "launch",
+            "mainClass": "CodilityDominator",
+            "projectName": "Allgorithm-DataStructure_ee08ae9a"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-CodilityFish<Allgorithm-DataStructure_ee08ae9a>",
+            "request": "launch",
+            "mainClass": "CodilityFish",
+            "projectName": "Allgorithm-DataStructure_ee08ae9a"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-CodilityFrogJump<Allgorithm-DataStructure_ee08ae9a>",
+            "request": "launch",
+            "mainClass": "CodilityFrogJump",
+            "projectName": "Allgorithm-DataStructure_ee08ae9a"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-CodilityFrogRiverOne<Allgorithm-DataStructure_ee08ae9a>",
+            "request": "launch",
+            "mainClass": "CodilityFrogRiverOne",
+            "projectName": "Allgorithm-DataStructure_ee08ae9a"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-CodilityMaxCounters<Allgorithm-DataStructure_ee08ae9a>",
+            "request": "launch",
+            "mainClass": "CodilityMaxCounters",
+            "projectName": "Allgorithm-DataStructure_ee08ae9a"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-CodilityMaxProdOfThree<Allgorithm-DataStructure_ee08ae9a>",
+            "request": "launch",
+            "mainClass": "CodilityMaxProdOfThree",
+            "projectName": "Allgorithm-DataStructure_ee08ae9a"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-CodilityMissingInteger<Allgorithm-DataStructure_ee08ae9a>",
+            "request": "launch",
+            "mainClass": "CodilityMissingInteger",
+            "projectName": "Allgorithm-DataStructure_ee08ae9a"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-CodilityNesting<Allgorithm-DataStructure_ee08ae9a>",
+            "request": "launch",
+            "mainClass": "CodilityNesting",
+            "projectName": "Allgorithm-DataStructure_ee08ae9a"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-CodilityOddOccurenceInArray<Allgorithm-DataStructure_ee08ae9a>",
+            "request": "launch",
+            "mainClass": "CodilityOddOccurenceInArray",
+            "projectName": "Allgorithm-DataStructure_ee08ae9a"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-DeplicateElements<Allgorithm-DataStructure_ee08ae9a>",
+            "request": "launch",
+            "mainClass": "DeplicateElements",
+            "projectName": "Allgorithm-DataStructure_ee08ae9a"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-FibonacciNumbers<Allgorithm-DataStructure_ee08ae9a>",
+            "request": "launch",
+            "mainClass": "FibonacciNumbers",
+            "projectName": "Allgorithm-DataStructure_ee08ae9a"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-LinkedList<Allgorithm-DataStructure_ee08ae9a>",
+            "request": "launch",
+            "mainClass": "LinkedList",
+            "projectName": "Allgorithm-DataStructure_ee08ae9a"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-MergeSort<Allgorithm-DataStructure_ee08ae9a>",
+            "request": "launch",
+            "mainClass": "MergeSort",
+            "projectName": "Allgorithm-DataStructure_ee08ae9a"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-PokerGame<Allgorithm-DataStructure_ee08ae9a>",
+            "request": "launch",
+            "mainClass": "PokerGame",
+            "projectName": "Allgorithm-DataStructure_ee08ae9a"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Recursion<Allgorithm-DataStructure_ee08ae9a>",
+            "request": "launch",
+            "mainClass": "Recursion",
+            "projectName": "Allgorithm-DataStructure_ee08ae9a"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-SelectionSorting<Allgorithm-DataStructure_ee08ae9a>",
+            "request": "launch",
+            "mainClass": "SelectionSorting",
+            "projectName": "Allgorithm-DataStructure_ee08ae9a"
+        }
+    ]
+}
