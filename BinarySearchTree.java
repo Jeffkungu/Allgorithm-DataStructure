@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Stack;
+
 public class BinarySearchTree {
     private static BSTNode root;
 
@@ -9,7 +13,7 @@ public class BinarySearchTree {
             recursiveAddNode(root ,arr[i]);
         }
 
-        preOrderTraversal(root);
+        inOrderTraversal_WithoutRecursion(root);
 
     }
 
@@ -73,9 +77,42 @@ public class BinarySearchTree {
 
     }
 
-     public static void preOrderTraversal(BSTNode node){
+    /**
+     * @return List containing values added from inOrder traversal of a BST
+     * 
+     * Create a Stack that saves the nodes visited in memory.
+     * 
+     * Use a while loop to traverse through the nodes while adding them to the Stack. When you reach a
+     * node with the null value, start removing the nodes from the stack.
+     */
+     public static List<Integer> inOrderTraversal_WithoutRecursion(BSTNode node){
+        BSTNode tree = node;
+        List<Integer> values = new ArrayList<>();
+        Stack<BSTNode> stack = new Stack<>();
+        
+        
+        while(!stack.isEmpty() || tree != null){
+            /**
+             * Left: go as left as possible, the stack keeps the history of nodes that need
+             * searching
+             */
+            while(tree != null){
+                stack.push(tree);
+                tree = tree.getLeftNode();
+            }
 
-         System.out.println(node.toString());
+            /**
+             * after the above loop tree becomes null, so we start poping values from the stack
+             * and following the inOrder traversal
+             * */ 
+            tree = stack.pop();
+            values.add(tree.getValue());
+
+            tree = tree.getRightNode();
+        }
+
+        System.out.println(values.toString());
+        return values;
      }
 
 }
